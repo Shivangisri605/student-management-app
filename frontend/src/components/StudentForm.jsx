@@ -24,7 +24,7 @@ const StudentForm = () => {
     //Fetch your data
     const fetchStudents = async () => {
         try{
-            const res = await axios.get('https://student-management-app-16v6.onrender.com')
+            const res = await axios.get('https://student-management-app-16v6.onrender.com/api/students')
             setStudents(res.data);
         } catch(err){
             console.log('Fetch Error : ', err);
@@ -39,7 +39,7 @@ const StudentForm = () => {
     const handleDelete = async(id) => {
         if(window.confirm('Are you sure to delete this student?')){
             try{
-                await axios.delete(`https://student-management-app-16v6.onrender.com/${id}`);
+                await axios.delete(`https://student-management-app-16v6.onrender.com/api/students/${id}`);
                 alert('Student Deleted Successfully..');
                 fetchStudents();
             } catch(err){
@@ -66,10 +66,10 @@ const handleSubmit = async(e) => {
     e.preventDefault();
     try{
         if (editId) {
-            const res = await axios.put(`https://student-management-app-16v6.onrender.com/${editId}`, formData);
+            const res = await axios.put(`https://student-management-app-16v6.onrender.com/api/students/${editId}`, formData);
             alert(res.data.message);
         } else {
-            const res = await axios.post('https://student-management-app-16v6.onrender.com', formData);
+            const res = await axios.post('https://student-management-app-16v6.onrender.com/api/students', formData);
             console.log(res.data);
             alert('Success: ' + res.data.message);
         }
