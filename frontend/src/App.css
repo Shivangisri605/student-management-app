@@ -1,0 +1,207 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #f0f4f8; 
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.container{
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9; 
+  border-radius: 12px;
+  box-shadow: 0 40px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.student-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px;
+}
+
+.student-form input,
+.student-form select,
+.student-form textarea{
+  padding: 12px;
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.full-width{
+  grid-column: 1/ span 2;
+}
+
+button{
+  grid-column: 1/ span 2;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover{
+  background-color: #45a049;
+}
+
+.selected-subjects-box{
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  min-height: 20px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.3s;
+}
+.selected-subjects-box:hover {
+    border-color: #4A90E2; 
+}
+
+.dropdown-container{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Thoda shadow depth ke liye */
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.dropdown-select {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #eee;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.table-container {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.table-title {
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Mobile responsive ke liye */
+}
+
+/* Main Table Styling */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.student-table th:nth-child(1), 
+.student-table td:nth-child(1) { width: 12%; }
+
+.student-table th:nth-child(2),
+ .student-table td:nth-child(2) { width: 12%; }
+
+.student-table th:nth-child(3),
+.student-table td:nth-child(3) { width: 5%; }
+
+
+.student-table th:nth-child(4), 
+.student-table td:nth-child(4) { width: 8%; }
+
+.student-table th:nth-child(5), 
+.student-table td:nth-child(5) { width: 12%; }
+
+.student-table th:nth-child(6), 
+.student-table td:nth-child(6) { width: 12%; }
+
+.student-table th:nth-child(7), 
+.student-table td:nth-child(7) { width: 10%; }
+
+.student-table th:nth-child(8), 
+.student-table td:nth-child(8) { 
+    width: 15%; 
+    
+}
+
+.student-table th, .student-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bio-cell {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+/* Hover effect on rows */
+.student-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Action Buttons Styling */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
